@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCS - Keremcem Saçlı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/icon.png">
+    <style>
+        .fa-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            background-color: red;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+        }
+        * {
+            scrollbar-color: blue #f0f0f0;
+            scrollbar-width: thin;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <button id="scrollToTopBtn" class="fixed bottom-10 mx-5 right-0 z-50 text-4xl bg-blue-600 text-white px-4 py-2 rounded-full cursor-pointer" style="display: none;">↑</button>
+
+    <section class="mx-5 ">
+        <header class="container flex mt-12 justify-between items-center mx-auto">
+            <div class="text-3xl font-bold md:block mx-0 md:mx-5 lg:mx-5">KCS</div>
+            <nav class="flex">
+                <ul class="hidden md:hidden lg:flex space-x-6 text-2xl">
+                    <li><a href="#hakkimda" class="hover:text-primary" data-lang="tr">Hakkımda <i class="mx-2 fa-solid fa-user text-primary"></i></a></li>
+                    <li><a href="#about" class="hover:text-primary" data-lang="en">About <i class="mx-2 fa-solid fa-user text-primary"></i></a></li>
+                    <li><a href="#yetenekler" class="hover:text-highlight" data-lang="tr">Yetenekler <i class="fa-solid fa-laptop text-highlight"></i></a></li>
+                    <li><a href="#skills" class="hover:text-highlight" data-lang="en">Skills <i class="fa-solid fa-laptop text-highlight"></i></a></li>
+                    <li><a href="#egitim" class="hover:text-gray-500" data-lang="tr">Eğitim <i class="mx-1 fa-solid fa-school text-black"></i></a></li>
+                    <li><a href="#education" class="hover:text-gray-500" data-lang="en">Education <i class="mx-1 fa-solid fa-school text-black"></i></a></li>
+                    <li><a href="#kariyer" class="hover:text-accent" data-lang="tr">Kariyer <i class="fa-solid fa-briefcase text-accent"></i></a></li>
+                    <li><a href="#career" class="hover:text-accent" data-lang="en">Career <i class="fa-solid fa-briefcase text-accent"></i></a></li>
+                </ul>
+                <div class="flex space-x-12 ms-12">
+                    <button id="lang-switch" class="h-10 rounded-lg"></button>
+                </div>
+                <div class="mx-12">
+                   <button id="mobileMenuButton" class="flex md:flex lg:hidden"> <i class="fas fa-list text-4xl"></i> </button> 
+                </div>    
+            </nav>       
+        </header>    
+    </section>
+
+    <div id="mobileMenu" class="mt-12 mx-5 bg-black p-4 text-white rounded-lg hidden">
+        <ul class="md:flex md:flex-col space-y-4 lg:hidden text-2xl">
+            <li><a href="#hakkimda" class="hover:text-primary" data-lang="tr">Hakkımda <i class="mx-2 fa-solid fa-user text-primary"></i></a></li>
+            <li><a href="#about" class="hover:text-primary" data-lang="en">About <i class="mx-2 fa-solid fa-user text-primary"></i></a></li>
+            <li><a href="#yetenekler" class="hover:text-highlight" data-lang="tr">Yetenekler <i class="fa-solid fa-laptop text-highlight"></i></a></li>
+            <li><a href="#skills" class="hover:text-highlight" data-lang="en">Skills <i class="fa-solid fa-laptop text-highlight"></i></a></li>
+            <li><a href="#egitim" class="hover:text-gray-500" data-lang="tr">Eğitim <i class="mx-1 fa-solid fa-school text-gray-400"></i></a></li>
+            <li><a href="#education" class="hover:text-gray-500" data-lang="en">Education <i class="mx-1 fa-solid fa-school text-gray-400"></i></a></li>
+            <li><a href="#kariyer" class="hover:text-accent" data-lang="tr">Kariyer <i class="fa-solid fa-briefcase text-accent"></i></a></li>
+            <li><a href="#career" class="hover:text-accent" data-lang="en">Career <i class="fa-solid fa-briefcase text-accent"></i></a></li>
+        </ul>
+    </div>
+
+    <main class="container mx-auto mt-20">
+        <section class="md:flex md:flex-col lg:flex-row lg:flex items-center justify-center mx-5">
+            <div class="md:w-1/1 lg:w-1/2">
+                <h1 class="text-4xl md:text-4xl lg:text-6xl font-bold mb-4" data-lang="tr">
+                    Merhaba! 👋 <i class="fas fa-happy"></i><br>Ben <span class="text-primary">Keremcem Saçlı 🧑🏻‍💻</span>
+                </h1>
+                <h1 class="text-4xl md:text-4xl lg:text-6xl font-bold mb-4" data-lang="en">
+                    Hello! 👋 <i class="fas fa-happy"></i><br>I am <span class="text-primary">Keremcem Saçlı 🧑🏻‍💻</span>
+                </h1>
+                <p class="mb-8 text-2xl md:text-2xl lg:text-2xl my-12" data-lang="tr">
+                    Ben Kerem, 2006 doğumluyum. Küçük yaşlarımdan beri tasarım ve kodlamaya meraklıyım. Küçük yaşlarımda yaptığım ufak tefek tasarım işleri ile kendime bir temel oluşturdum. Lise zamanlarımda tasarımın yanında kodlama alanına da yönelince kodlama ve tasarımı birleştirip Web Tasarımı ve Kodlama alanında çalışmaya karar verdim. Hem tasarlayıp hem de kodluyorum ve her geçen gün yeni şeyler öğrenerek, kendime yeni şeyler katarak kendimi bu alanlarda geliştirmeye çalışıyorum.
+                </p>
+                <p class="mb-8 text-2xl md:text-2xl lg:text-2xl my-12" data-lang="en">
+                    I'm Kerem, born in 2006. I've been interested in design and coding since my early ages. I created a foundation for myself with the little design work I did at a young age. When I turned to coding as well as design in high school, I decided to combine coding and design and work in the field of Web Design and Coding. I both design and code, and I try to improve myself in these areas by learning something new every day and adding new things to myself.
+                </p>
+                <div class="socials text-5xl flex md:flex lg:flex-col space-x-6 md:space-x-4 lg:space-x-0 my-12 md:my-12  lg:my-0">
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/keremcem.sacli/" class="hover:opacity-70" target="_blank"> <i class="fa-brands fa-instagram"></i> </a> 
+                        <a href="https://www.linkedin.com/in/keremcemsacli/" class="hover:opacity-70" target="_blank"> <i class="fa-brands fa-linkedin text-blue-500"></i> </a> 
+                        <a href="https://github.com/keremcemsacli" class="hover:opacity-70" target="_blank"> <i class="fa-brands fa-github text-purple-600"></i> </a>
+                    </div>
+
+                    <div class="text-xl text-white mt-0 md:mt-0 lg:mt-12">
+                        <button class="bg-highlight border border-gray-300 px-6 py-2 rounded-full hover:opacity-70" data-lang="tr">CV İndir</button>
+                        <button class="bg-highlight border border-gray-300 px-6 py-2 rounded-full hover:opacity-70" data-lang="en">CV Download</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="md:w-1/1 lg:w-1/2 relative flex justify-center md:flex md:justify-center">
+                <img src="images/me3.jpg" class="w-3/4 md:ml-0 lg:ml-auto rounded-lg">
+            </div>
+        </section>
+
+        <section id="yetenekler" class="mx-5 mt-12">
+            <h2 class="text-4xl font-bold mb-8" data-lang="tr">Yeteneklerim 🖥️</h2>
+            <h2 class="text-4xl font-bold mb-8" data-lang="en">My Skills 🖥️</h2>
+
+            <div class="grid md:container md:grid-cols-1 lg:grid-cols-3 gap-8 text-3xl text-white">
+                <div class="bg-yellow-500 p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">Web Tasarımı</p>
+                    <p data-lang="en">Web Design</p>
+                </div>
+                <div class="bg-red-600 p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">Uygulama Tasarımı</p>
+                    <p data-lang="en">Application Design</p>
+                </div>
+                <div class="bg-accent p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">Grafik Tasarım</p>
+                    <p data-lang="en">Graphic Design</p>
+                </div>
+                <div class="bg-green-500 p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">Web Geliştirme</p>
+                    <p data-lang="en">Web Development</p>
+                </div>
+                <div class="bg-pink-500 p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">UI/UX Tasarım</p>
+                    <p data-lang="en">UI/UX Design</p>
+                </div>
+                <div class="bg-yellow-600 p-6 rounded-lg flex items-center">
+                    <p data-lang="tr">SEO</p>
+                    <p data-lang="en">SEO</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20 mx-5" id="egitim">
+            <h2 class="text-4xl font-bold mb-8" data-lang="tr">Eğitim 🏫</h2>
+            <h2 class="text-4xl font-bold mb-8" data-lang="en">Education 🏫</h2>
+            <hr class="my-12">
+            <div class="grid grid-cols-1 lg:grid lg:grid-cols-2 gap-8 text-2xl text-black">
+                <div>
+                    <p class="font-bold text-3xl" data-lang="tr">İlkokul</p>
+                    <p class="font-bold text-3xl" data-lang="en">Primary School</p>
+                    <p class="mt-12">Fatih İlköğretim İlkokulu</p>
+                    <p class="text-xl my-2">İstanbul/Bağcılar, Türkiye</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-3xl" data-lang="tr">Ortaokul</p>
+                    <p class="font-bold text-3xl" data-lang="en">Middle School</p>
+                    <p class="mt-8">Kocaragıppaşa Ortaokulu</p>
+                    <p class="text-xl my-2">İstanbul/Bağcılar, Türkiye</p>
+                    <p class="mt-4">İbrahim Keresteci Ortaokulu</p> 
+                    <p class="text-xl my-2">İstanbul/Bağcılar, Türkiye</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-3xl" data-lang="tr">Lise</p> 
+                    <p class="font-bold text-3xl" data-lang="en">High School</p>
+                    <p class="mt-12">Abdurrahman Nermin Bilimli Mesleki ve Tekniki Anadolu Lisesi</p>
+                    <p class="text-xl my-2" data-lang="tr">Bilişim Teknolojileri / Yazılım Geliştirme</p>
+                    <p class="text-xl my-2" data-lang="en">Information Technologies / Software Development</p>
+                    <p class="text-xl my-2">İstanbul/Barbaros, Türkiye</p>
+                </div>
+                <div>
+                    <p class="font-bold text-3xl" data-lang="tr">Üniversite</p> 
+                    <p class="font-bold text-3xl" data-lang="en">University</p>
+                    <p class="mt-12">-</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-20 mx-5" id="kariyer">
+            <h2 class="text-4xl font-bold mb-8" data-lang="tr">Kariyer 🧑🏻‍💻</h2>
+            <h2 class="text-4xl font-bold mb-8" data-lang="en">Career 🧑🏻‍💻</h2>
+            <hr class="my-12">
+            <div class="grid grid-cols-1 gap-8 text-2xl text-black">
+                <ul class="space-y-4">
+                    <li class="flex flex-row">
+                        <div class="w-2/2">
+                            <img src="images/avmek.jpg" class="rounded-lg mb-4 object-cover" style="height: 200px; max-width: 200px;" alt="">
+                        </div>         
+                        <div class="w-2/2 ms-5 justify-center flex flex-col">
+                            <p class="text-2xl md:text-2xl lg:text-3xl font-bold">Intern</p>
+                            <p class="text-xl md:text-xl lg:text-2xl">AVMEK Creative Media</p>
+                            <p class="text-lg md:text-lg lg:text-lg"> Kas 2023 - Haz 2024 · 8 ay </p>
+                        </div>
+                    </li>
+
+                    <li class="flex flex-row">
+                        <div class="w-2/2">
+                            <img src="images/kaytec.jpg" class="rounded-lg mb-4 object-cover" style="height: 200px; max-width: 200px;" alt="">
+                        </div>         
+                        <div class="w-2/2 ms-5 justify-center flex flex-col">
+                            <p class="text-2xl md:text-2xl lg:text-3xl font-bold">Front-End Developer & Graphic Designer</p>
+                            <p class="text-xl md:text-xl lg:text-2xl">KAYTEC</p>
+                            <p class="text-lg md:text-lg lg:text-lg"> Oca 2024 - Nis 2024 · 4 ay </p>
+                        </div>
+                    </li>
+
+                    <li class="flex flex-row">
+                        <div class="w-2/2">
+                            <img src="images/gnt.jpg" class="rounded-lg mb-4 object-cover" style="height: 200px; max-width: 200px;" alt="">
+                        </div>         
+                        <div class="w-2/2 ms-5 justify-center flex flex-col">
+                            <p class="text-2xl md:text-2xl lg:text-3xl font-bold">Front-End Developer & Graphic Designer</p>
+                            <p class="text-xl md:text-xl lg:text-2xl">GNT:V - GNT Roleplay</p>
+                            <p class="text-lg md:text-lg lg:text-lg"> 2022 - 2023 · 1 yıl</p>
+                        </div>
+                    </li>
+
+                    <li class="flex flex-row">
+                        <div class="w-2/2">
+                            <img src="images/konsey.jpg" class="rounded-lg mb-4 object-cover" style="height: 200px; max-width: 200px;" alt="">
+                        </div>         
+                        <div class="w-2/2 ms-5 justify-center flex flex-col">
+                            <p class="text-2xl md:text-2xl lg:text-3xl font-bold">Founder</p>
+                            <p class="text-xl md:text-xl lg:text-2xl">Konsey Comics</p>
+                            <p class="text-lg md:text-lg lg:text-lg"> 2022 - 2023 · 1 yıl</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mx-auto mt-20 p-4 bg-black text-white w-full text-center">
+        <div class="text-xl font-bold">KCS</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
