@@ -1,14 +1,20 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./**/*.{html,js}"],
-    theme: {
-      extend: {
-        colors: {
-          primary: '#3B82F6',    // Mavi
-          secondary: '#1E1E1E',  // Siyah
-          accent: '#8B5CF6',     // Mor
-          highlight: '#EF4444',  // Kırmızı
-        }
-      }
+  content: ["./**/*.{html,js}"],
+  theme: {
+    extend: {
+      colors: {
+      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [
+    // Özel sınıflarınızı tanımlamak için bir plugin ekleyin
+    function ({ addUtilities }) {
+      const newUtilities = {
+        // Daha fazla özel sınıf ekleyebilirsiniz
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
+};
